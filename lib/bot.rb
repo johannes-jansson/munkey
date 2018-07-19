@@ -9,6 +9,7 @@ require_relative "bot/message_extensions"
 require_relative "bot/server_extensions"
 
 require_relative "bot/regions"
+require_relative "bot/games"
 require_relative "bot/searches"
 require_relative "bot/group_buys"
 require_relative "bot/image_processing"
@@ -35,6 +36,7 @@ BOT = Discordrb::Commands::CommandBot.new(
 bot = BOT
 
 bot.include! Bot::Regions
+bot.include! Bot::Games
 bot.include! Bot::Searches
 bot.include! Bot::GroupBuys
 bot.include! Bot::ImageProcessing

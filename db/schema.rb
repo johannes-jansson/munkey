@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 2018_06_04_200057) do
     t.integer "position"
   end
 
+  create_table "games", force: :cascade do |t|
+    t.citext "name"
+    t.bigint "server_id"
+    t.string "color"
+    t.integer "position"
+  end
+
 # Could not dump table "searches" because of following StandardError
 #   Unknown type 'tsquery' for column 'query'
 
